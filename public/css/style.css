@@ -1,0 +1,130 @@
+/* -----------------------------------------Color Settings----------------------------------------- */
+
+:root {
+    --mainBg : black;
+    --mainText : white;
+    --secondText : #777777;
+    --mainEmphasis : #00509D;
+    --secondEmphasis : #FF5642;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------Global Settings--------------------------------------- */
+
+body {
+    background-color: var(--mainBg);
+}
+
+.containerWidth {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin: 4rem 0rem;
+}
+
+/* ------------------------------------------Font Settings----------------------------------------- */
+
+html {
+    font-family: -apple-system , system-ui , BlinkMacSystemFont , "Segoe UI" ,Roboto , "Helvetica Neue" , Arial , sans-serif;
+    font-size: 15px;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 5.5rem;
+    color: var(--mainText);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--mainText);
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.5rem; 
+    color: var(--mainText);
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--secondText);
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem; 
+    color: var(--secondText);
+    transition: .2s;
+}
+
+/* ------------------------------------------Header------------------------------------------------ */
+header {
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/img/avatar.png') no-repeat;
+    background-position: bottom;
+}
+
+
+nav {
+    width: 100%;
+    height: 10vh;
+}
+
+.containerNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.containerLogo img {
+    height: 5vh;
+    width: auto;
+}
+
+.containerLinks ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.containerLinks ul li a {
+    margin-left: 2rem;
+}
+
+/* ------------------------------------------Presentation------------------------------------------ */
+
+.containerContent {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerContent h1 {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.containerContent p {
+    max-width: 650px;
+    text-align: center;
+    margin-top: 1vh;
+}
