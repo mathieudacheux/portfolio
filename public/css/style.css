@@ -11,6 +11,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* ------------------------------------------Global Settings--------------------------------------- */
@@ -55,16 +56,60 @@ p {
 
 .subtitle {
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--secondText);
 }
 
 a {
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.25rem; 
+    font-size: 1.5rem; 
     color: var(--secondText);
     transition: .2s;
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+
+    a {
+        font-size: 1.25rem;
+    }
 }
 
 /* ------------------------------------------Header------------------------------------------------ */
@@ -106,8 +151,38 @@ nav {
 }
 
 .containerLinks ul li a {
-    margin-left: 2rem;
+    padding-left: 2rem;
 }
+
+@media screen and (max-width: 576px) {
+    header {
+        background-size: 800px;
+    }
+    .containerLogo {
+        padding-left: .5rem;
+    }
+    
+    .containerLinks ul li a {
+        padding-left: 0;
+        padding-right: .5rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    header {
+        background-size: 900px;
+    }
+    
+    .containerLogo {
+        padding-left: 1rem;
+    }
+
+    .containerLinks ul li a {
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+}
+
 
 /* ------------------------------------------Presentation------------------------------------------ */
 
@@ -127,4 +202,18 @@ nav {
     max-width: 650px;
     text-align: center;
     margin-top: 1vh;
+}
+
+@media screen and (max-width: 576px) {
+    .containerContent {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .containerContent {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
