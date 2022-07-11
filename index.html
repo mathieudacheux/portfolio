@@ -17,18 +17,69 @@
                     </div>
                     <div class="containerLinks">
                         <ul>
-                            <li><a href="#skills">Compétences</a></li>
-                            <li><a href="#projects">Projets</a></li>
-                            <li><a href="#form">Contact</a></li>
+                            <li><a class="navLinks" href="#history">Parcours</a></li>
+                            <li><a class="navLinks" href="#projects">Projets</a></li>
+                            <li><a class="navLinks" href="#form">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
             <div class="containerContent">
-                    <h1>Hi, I'm Mathieu</h1>
-                    <p class="subtitle">I am a web developer specialized in back-end</p>
+                    <h1>Salut, c'est Mathieu</h1>
+                    <p class="subtitle">Développeur web junior spécialisé back-end</p>
             </div>
         </header>
+        <main>
+            <section id="history">
+                <div class="skillsTitle">
+                    <h2>Mon parcours</h2>
+                </div>
+                <div class="containerSkills">
+                    <div class="containerSkillsLeft">
+                        <h3 class="contentTitle">Moi-même, ma personne</h3>
+                        <p class="contentParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
+                        nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
+                        quia laborum veritatis enim libero sequi quae rem modi deserunt 
+                        voluptatibus possimus quasi! <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
+                        nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
+                        quia laborum veritatis enim libero sequi quae rem modi deserunt 
+                        voluptatibus possimus quasi! <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
+                        nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
+                        quia laborum veritatis enim libero sequi quae rem modi deserunt 
+                        voluptatibus possimus quasi!</p>
+                    </div>
+                    <div class="containerSkillsRight">
+                        <span class="cloudSkills"></span>
+                        <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+                        <script>
+                            const Texts = [
+                                'HTML', 'Css', 'JavaScript',
+                                'PHP', 'Symfony', 'WordPress',
+                                'Git', 'NPM', 'MySQL', 'VS Code'
+                            ];
+
+                            var tagCloud = TagCloud('.cloudSkills', Texts, {
+
+                            radius: 225,
+
+                            maxSpeed: 'normal',
+                            initSpeed: 'low',
+
+                            direction: 190,
+
+                            keep: true
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="buttonSkills">
+                    <button><a href="#skills" class="buttonLinks">En savoir plus</a></button>
+                </div>
+            </section>
+        </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
 </body>
 </html>

@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* ------------------------------------------Global Settings--------------------------------------- */
@@ -26,9 +27,21 @@ body {
 }
 
 section {
-    margin: 4rem 0rem;
+    height: 100vh;
+    width: 100%;
 }
 
+button {
+    background-color: var(--secondEmphasis);
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: var(--mainEmphasis);
+}
 /* ------------------------------------------Font Settings----------------------------------------- */
 
 html {
@@ -44,13 +57,19 @@ h1 {
 
 h2 {
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    color: var(--mainText);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 3rem;
     color: var(--mainText);
 }
 
 p {
     font-weight: 500;
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
     color: var(--mainText);
 }
 
@@ -60,21 +79,32 @@ p {
     color: var(--secondText);
 }
 
-a {
+.buttonLinks {
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
+    color: var(--mainText);
+}
+
+.navLinks {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.75rem; 
     color: var(--secondText);
     transition: .2s;
 }
 
 @media screen and (max-width: 576px) {
     h1 {
-        font-size: 3rem;
+        font-size: 2.75rem;
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 
     p {
@@ -82,21 +112,29 @@ a {
     }
 
     .subtitle {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
-    a {
+    .navLinks {
+        font-size: 1rem;
+    }
+
+    .buttonLinks {
         font-size: 1rem;
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
     }
 
     p {
@@ -104,15 +142,41 @@ a {
     }
 
     .subtitle {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
-    a {
+    .navLinks {
+        font-size: 1.25rem;
+    }
+
+    .buttonLinks {
         font-size: 1.25rem;
     }
 }
 
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------Header------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
 header {
     height: 100vh;
     width: 100%;
@@ -170,7 +234,7 @@ nav {
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     header {
-        background-size: 900px;
+        background-size: 850px;
     }
     
     .containerLogo {
@@ -180,6 +244,21 @@ nav {
     .containerLinks ul li a {
         padding-left: 0;
         padding-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+    header {
+        background-size: 950px;
+    }
+
+    .containerLogo {
+        padding-left: 1.25rem
+    }
+
+    .containerLinks ul li a {
+        padding-left: 0;
+        padding-right: 1.25rem;
     }
 }
 
@@ -216,4 +295,86 @@ nav {
         max-width: 90%;
         margin: 0 auto;
     }
+}
+
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+    .containerContent {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Compétences------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+.skillsTitle {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSkills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.containerSkillsLeft {
+    width: 45%;
+    /* height: 100%; */
+}
+
+.containerSkillsRight {
+    width: 45%;
+    /* height: 100%; */
+}
+
+.buttonSkills {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+    .containerSkills {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .containerSkillsLeft, .containerSkillsRight {
+        width: 90%;
+    }
+}
+
+/* ------------------------------------------À propos---------------------------------------------- */
+
+.contentTitle {
+    padding-bottom: 3rem;
+}
+
+.contentParagraph {
+    line-height: 2rem;
+}
+/* ------------------------------------------Nuages de mots---------------------------------------- */
+
+.cloudSkills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tagcloud {
+    color: var(--secondEmphasis);
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: 1s ease-in-out;
+    
 }
