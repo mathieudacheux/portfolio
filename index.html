@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="containerWidth">
+
+        <!-- HeroBanner du Portfolio -->
+
         <header>
             <nav>
                 <div class="containerNav">
@@ -29,13 +32,19 @@
                     <p class="subtitle">Développeur web junior spécialisé back-end</p>
             </div>
         </header>
+
+        <!-- Contenu principal du Portfolio -->
+
         <main>
+
+            <!-- Section compétences du Portfolio -->
+
             <section id="history">
-                <div class="skillsTitle">
+                <div class="sectionTitle">
                     <h2>Mon parcours</h2>
                 </div>
-                <div class="containerSkills">
-                    <div class="containerSkillsLeft">
+                <div class="containerFlex">
+                    <div class="containerFlexLeft">
                         <h3 class="contentTitle">Moi-même, ma personne</h3>
                         <p class="contentParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
                         nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
@@ -50,32 +59,59 @@
                         quia laborum veritatis enim libero sequi quae rem modi deserunt 
                         voluptatibus possimus quasi!</p>
                     </div>
-                    <div class="containerSkillsRight">
-                        <span class="cloudSkills"></span>
-                        <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
-                        <script>
-                            const Texts = [
-                                'HTML', 'Css', 'JavaScript',
-                                'PHP', 'Symfony', 'WordPress',
-                                'Git', 'NPM', 'MySQL', 'VS Code'
-                            ];
-
-                            var tagCloud = TagCloud('.cloudSkills', Texts, {
-
-                            radius: 225,
-
-                            maxSpeed: 'normal',
-                            initSpeed: 'low',
-
-                            direction: 190,
-
-                            keep: true
-                            });
-                        </script>
+                    <div class="containerFlexRight">
                     </div>
                 </div>
-                <div class="buttonSkills">
+                <div class="buttonSection">
                     <button><a href="#skills" class="buttonLinks">En savoir plus</a></button>
+                </div>
+            </section>
+
+            <!-- Section projets du Portfolio  -->
+
+            <section id="projects">
+                <div class="sectionTitle">
+                    <h2>Mes projets</h2>
+                </div>
+                <div class="containerProjects">
+                    <div class="projet1 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet2 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet3 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet4 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet5 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet6 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet7 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                    <div class="projet8 cardProjects"><a href="github.io"><img src="./public/assets/img/avatar.png" alt="Projet 1"></a></div>
+                </div>
+                <div class="buttonSection">
+                    <button><a href="#skills" class="buttonLinks">En savoir plus</a></button>
+                </div>
+            </section>
+
+            <!-- Section contact du Portfolio  -->
+
+            <section id="form">
+                <div class="sectionTitle">
+                    <h2>Mon parcours</h2>
+                </div>
+                <div class="containerFlex">
+                    <div class="containerFlexLeft">
+                        <h3 class="contentTitle">Moi-même, ma personne</h3>
+                        <p class="contentParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
+                        nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
+                        quia laborum veritatis enim libero sequi quae rem modi deserunt 
+                        voluptatibus possimus quasi! <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
+                        nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
+                        quia laborum veritatis enim libero sequi quae rem modi deserunt 
+                        voluptatibus possimus quasi! <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, 
+                        nobis? Pariatur expedita consequatur nulla obcaecati doloremque dicta,
+                        quia laborum veritatis enim libero sequi quae rem modi deserunt 
+                        voluptatibus possimus quasi!</p>
+                    </div>
+                    <div class="containerFlexRight">
+                    </div>
                 </div>
             </section>
         </main>
