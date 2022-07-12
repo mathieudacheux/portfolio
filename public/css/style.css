@@ -359,14 +359,24 @@ nav {
 /* ------------------------------------------------------------------------------------------------ */
 
 @media screen and (max-width: 576px) {
-    .containerSkills {
+    .containerFlex {
         flex-direction: column;
-        height: auto;
+        height: 80vh;
     }
 
-    .containerSkillsLeft, .containerSkillsRight {
+    .containerFlexLeft, .containerFlexRight {
         width: 90%;
     }
+    
+    .containerParagrap
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .containerFlex {
+        
+    }
+}
+@media screen and (min-width: 993px) and (max-width : 1199px) {
 }
 
 /* ------------------------------------------À propos---------------------------------------------- */
