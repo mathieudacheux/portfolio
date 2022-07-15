@@ -183,7 +183,7 @@ p {
 .navLinks {
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.75rem; 
+    font-size: 1.25rem; 
     color: var(--secondText);
     transition: .2s;
 }
@@ -281,12 +281,13 @@ header {
     background: url('../assets/img/avatar.png') no-repeat;
     background-size: 600px;
     background-position: bottom;
+    animation: backgroundHeader 1.5s ease;
 }
-
 
 nav {
     width: 100%;
     height: 10vh;
+    animation: navContent 1s ease;
 }
 
 .containerNav {
@@ -369,6 +370,7 @@ nav {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    animation: navContent 2s ease;
 }
 
 .containerContent h1 {
@@ -459,28 +461,101 @@ nav {
 /* ------------------------------------------------------------------------------------------------ */
 
 footer {
-    background-color: #00509D;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerLinks {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .footerLinks ul {
-    list-style-type: none;
-    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
 }
 
 .footerLogo {
-    width: 100%;
+    padding-top: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 17.5%;
 }
 
 .fa-github, .fa-linkedin {
     color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .footerLinks ul {
+        width: 90%;
+        padding-bottom: .5rem;
+        justify-content: space-around;
+    }
+    .footerLogo {
+        width: 50%;
+        padding-top: .5rem;
+        justify-content: space-around;
+    }
+
+    .footerIcons {
+        width: 35px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Animations-------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+@keyframes navContent {
+    0% {
+        opacity: 0%;
+        transform: translateY(-50vw);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-25vw);
+
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes backgroundHeader {
+    0% {
+        opacity: 0%;
+        filter: blur(100px);
+    }
+
+    50% {
+        opacity: 0%;
+        filter: blur(100px);
+
+    }
+
+    100% {
+        opacity: 100%;
+        filter: blur(0);
+    }
 }
