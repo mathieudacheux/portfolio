@@ -61,7 +61,7 @@ section {
 
 .containerFlexRight {
     width: 45%;
-    background-color: #00509D;
+    height: 100%;
 }
 
 @media screen and (max-width: 576px) {
@@ -281,7 +281,7 @@ header {
     background: url('../assets/img/avatar.png') no-repeat;
     background-size: 600px;
     background-position: bottom;
-    animation: backgroundHeader 1.5s ease;
+    animation: backgroundHeader 2s ease;
 }
 
 nav {
@@ -370,7 +370,7 @@ nav {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    animation: navContent 2s ease;
+    animation: navContent 2.25s ease;
 }
 
 .containerContent h1 {
@@ -407,6 +407,24 @@ nav {
 
 
 /* ------------------------------------------Nuages de mots---------------------------------------- */
+
+.tagCloudContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagcloud {
+    font-weight: 800;
+    font-size: 1.25rem;
+    transition: .2s ease-in-out;
+    color: var(--secondEmphasis);
+}
+  
+.tagcloud--item:hover {
+    color: var(--mainEmphasis) ;
+}
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
