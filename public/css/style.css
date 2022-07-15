@@ -1,0 +1,581 @@
+/* -----------------------------------------Color Settings----------------------------------------- */
+
+:root {
+    --mainBg : black;
+    --mainText : white;
+    --secondText : #777777;
+    --mainEmphasis : #00509D;
+    --secondEmphasis : #FF5642;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------------Global Settings--------------------------------------- */
+
+body {
+    background-color: var(--mainBg);
+}
+
+.containerWidth {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    /* ------------------------------------------Section & Flex------------------------------------ */
+
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+@media screen and (min-width :0px) and (max-width: 992px) {
+    section {
+        height: auto;
+    }
+}
+
+.sectionTitle {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.containerFlexLeft {
+    width: 45%;
+}
+
+.containerFlexRight {
+    width: 45%;
+    height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .containerFlex {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .containerFlexLeft, .containerFlexRight {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .containerFlex {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .containerFlexLeft, .containerFlexRight {
+        width: 90%;
+        height: 50%;
+    }
+}
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+    .containerFlex {
+        justify-content: space-around;
+        height: 80vh;
+    }
+
+    .containerFlexLeft, .containerFlexRight {
+        width: 45%;
+    }
+}
+
+    /* ------------------------------------------Contenu section------------------------------------ */
+
+
+.contentTitle {
+    padding-bottom: 1.5rem;
+}
+
+.contentParagraph {
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .contentParagraph {
+        line-height: 1.5rem;
+    }
+}
+
+    /* ------------------------------------------Button section------------------------------------ */
+
+
+button {
+    background-color: var(--secondEmphasis);
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: var(--mainEmphasis);
+}
+
+.buttonSection {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ------------------------------------------Font Settings----------------------------------------- */
+
+html {
+    font-family: -apple-system , system-ui , BlinkMacSystemFont , "Segoe UI" ,Roboto , "Helvetica Neue" , Arial , sans-serif;
+    font-size: 15px;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 5.5rem;
+    color: var(--mainText);
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 4rem;
+    color: var(--mainText);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--mainText);
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.25rem; 
+    color: var(--mainText);
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--secondText);
+}
+
+.buttonLinks {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--mainText);
+}
+
+.navLinks {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem; 
+    color: var(--secondText);
+    transition: .2s;
+}
+
+.navLinks:hover {
+    color: var(--mainText);
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1.75rem;
+    }
+
+    .navLinks {
+        font-size: 1rem;
+    }
+
+    .buttonLinks {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    .subtitle {
+        font-size: 2.25rem;
+    }
+
+    .navLinks {
+        font-size: 1.25rem;
+    }
+
+    .buttonLinks {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 2.5rem;
+    }
+}
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Header------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+header {
+    height: 100vh;
+    width: 100%;
+    background: url('../assets/img/avatar.png') no-repeat;
+    background-size: 600px;
+    background-position: bottom;
+    animation: backgroundHeader 2s ease;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    animation: navContent 1s ease;
+}
+
+.containerNav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerLogo {
+    display: flex;
+    align-items: center;
+}
+
+.containerLogo img {
+    height: 5vh;
+    width: auto;
+}
+
+.containerLinks ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.containerLinks ul li a {
+    padding-left: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        background-size: 350px;
+    }
+    .containerLogo {
+        padding-left: .5rem;
+    }
+    
+    .containerLinks ul li a {
+        padding-left: 0;
+        padding-right: .5rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    header {
+        background-size: 550px;
+    }
+    
+    .containerLogo {
+        padding-left: 1rem;
+    }
+
+    .containerLinks ul li a {
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+    header {
+        background-size: 550px;
+    }
+
+    .containerLogo {
+        padding-left: 1.25rem
+    }
+
+    .containerLinks ul li a {
+        padding-left: 0;
+        padding-right: 1.25rem;
+    }
+}
+
+
+/* ------------------------------------------Presentation------------------------------------------ */
+
+.containerContent {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    animation: navContent 2.25s ease;
+}
+
+.containerContent h1 {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.containerContent p {
+    max-width: 650px;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+@media screen and (max-width: 576px) {
+    .containerContent {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .containerContent {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+    .containerContent {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+/* ------------------------------------------Nuages de mots---------------------------------------- */
+
+.tagCloudContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagcloud {
+    font-weight: 800;
+    font-size: 1.25rem;
+    transition: .2s ease-in-out;
+    color: var(--secondEmphasis);
+}
+  
+.tagcloud--item:hover {
+    color: var(--mainEmphasis) ;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Projets----------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+.containerProjects {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-template-areas:
+    "projet1 projet2 projet3 projet4"
+    "projet5 projet6 projet7 projet8";
+}
+
+.cardProjects {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardProjects a img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+    .containerProjects {
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "projet1 projet2" 
+        "projet3 projet4"
+        "projet5 projet6" 
+        "projet7 projet8";
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Footer------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerLinks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.footerLinks ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.footerLogo {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 17.5%;
+}
+
+.fa-github, .fa-linkedin {
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .footerLinks ul {
+        width: 90%;
+        padding-bottom: .5rem;
+        justify-content: space-around;
+    }
+    .footerLogo {
+        width: 50%;
+        padding-top: .5rem;
+        justify-content: space-around;
+    }
+
+    .footerIcons {
+        width: 35px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 993px) and (max-width : 1199px) {
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Animations-------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+
+@keyframes navContent {
+    0% {
+        opacity: 0%;
+        transform: translateY(-50vw);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-25vw);
+
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes backgroundHeader {
+    0% {
+        opacity: 0%;
+        filter: blur(100px);
+    }
+
+    50% {
+        opacity: 0%;
+        filter: blur(100px);
+
+    }
+
+    100% {
+        opacity: 100%;
+        filter: blur(0);
+    }
+}
+
+
