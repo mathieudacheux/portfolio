@@ -26,101 +26,16 @@ body {
     margin: 0 auto;
 }
 
-    /* ------------------------------------------Section & Flex------------------------------------ */
-
+@media screen and (max-width: 1199px) {
+    .containerWidth {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
 
 section {
-    height: 100vh;
     width: 100%;
 }
-
-@media screen and (min-width :0px) and (max-width: 992px) {
-    section {
-        height: auto;
-    }
-}
-
-#projects {
-    height: auto;
-}
-
-.sectionTitle {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.containerFlex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    height: 80vh;
-}
-
-.containerFlexLeft {
-    width: 45%;
-}
-
-.containerFlexRight {
-    width: 45%;
-    height: 100%;
-}
-
-@media screen and (max-width: 576px) {
-    .containerFlex {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .containerFlexLeft, .containerFlexRight {
-        width: 90%;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 577px) and (max-width: 992px) {
-    .containerFlex {
-        flex-direction: column;
-        height: 80vh;
-    }
-
-    .containerFlexLeft, .containerFlexRight {
-        width: 90%;
-        height: 50%;
-    }
-}
-@media screen and (min-width: 993px) and (max-width : 1199px) {
-    .containerFlex {
-        justify-content: space-around;
-        height: 80vh;
-    }
-
-    .containerFlexLeft, .containerFlexRight {
-        width: 45%;
-    }
-}
-
-    /* ------------------------------------------Contenu section------------------------------------ */
-
-
-.contentTitle {
-    padding-bottom: 1.5rem;
-}
-
-.contentParagraph {
-    line-height: 2rem;
-}
-
-@media screen and (max-width: 576px) {
-    .contentParagraph {
-        line-height: 1.5rem;
-    }
-}
-
-    /* ------------------------------------------Button section------------------------------------ */
-
 
 button {
     background-color: var(--secondEmphasis);
@@ -130,17 +45,17 @@ button {
     transition: .3s;
 }
 
-button:hover {
-    -webkit-box-shadow: 0px 0px 35px 10px rgba(255,114,98,0.5); 
-    box-shadow: 0px 0px 35px 10px rgba(255,114,98,0.5);
-}
-
 .buttonSection {
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.fa-brands, .fa-solid {
+    color: white;
+}
+
 /* ------------------------------------------Font Settings----------------------------------------- */
 
 html {
@@ -155,21 +70,30 @@ h1 {
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 4rem;
     color: var(--mainText);
 }
 
 h3 {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 3rem;
     color: var(--mainText);
+    padding-bottom: 2rem;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--mainText);
+    padding-bottom: 2rem;
 }
 
 p {
     font-weight: 500;
     font-size: 1.25rem; 
     color: var(--mainText);
+    /* line-height: 2rem; */
 }
 
 .subtitle {
@@ -214,6 +138,10 @@ p {
         font-size: 1.5rem;
     }
 
+    h4 {
+        font-size: 1.25rem;
+    }
+
     p {
         font-size: 1rem;
     }
@@ -242,6 +170,10 @@ p {
 
     h3 {
         font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
     }
 
     p {
@@ -274,10 +206,15 @@ p {
         font-size: 2rem;
     }
 
+    h4 {
+        font-size: 1.5rem;
+    }
+
     .subtitle {
         font-size: 2.5rem;
     }
 }
+
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------Header------------------------------------------------ */
@@ -290,13 +227,13 @@ header {
     background: url('../assets/img/avatar.png') no-repeat;
     background-size: 600px;
     background-position: bottom;
-    animation: backgroundHeader 1s ease;
+    animation: backgroundHeaderApparition 1.25s ease;
 }
 
 nav {
     width: 100%;
     height: 10vh;
-    animation: navContent 1s ease;
+    animation: navContentApparition 1s ease;
 }
 
 .containerNav {
@@ -329,15 +266,11 @@ nav {
 
 @media screen and (max-width: 576px) {
     header {
-        background-size: 350px;
+        background-size: 300px;
     }
-    .containerLogo {
-        padding-left: .5rem;
-    }
-    
     .containerLinks ul li a {
         padding-left: 0;
-        padding-right: .5rem;
+        padding-left: .5rem;
     }
 }
 
@@ -345,14 +278,9 @@ nav {
     header {
         background-size: 550px;
     }
-    
-    .containerLogo {
-        padding-left: 1rem;
-    }
-
     .containerLinks ul li a {
         padding-left: 0;
-        padding-right: 1rem;
+        padding-left: 1rem;
     }
 }
 
@@ -360,17 +288,10 @@ nav {
     header {
         background-size: 550px;
     }
-
-    .containerLogo {
-        padding-left: 1.25rem
-    }
-
     .containerLinks ul li a {
-        padding-left: 0;
-        padding-right: 1.25rem;
+        padding-left: 1.25rem;
     }
 }
-
 
 /* ------------------------------------------Presentation------------------------------------------ */
 
@@ -393,94 +314,119 @@ nav {
     margin-top: 1vh;
 }
 
-@media screen and (max-width: 576px) {
-    .containerContent {
-        max-width: 90%;
-        margin: 0 auto;
+.containerObject {
+    position: relative;
+    width: 100%;
+}
+
+.containerObjectLeft {
+    animation: objectLeftApparitionLeft 2s ease;
+}
+
+.containerObjectRight {
+    animation: objectLeftApparitionRight 2.5s ease;
+}
+
+.objectTransitionLeft {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+    width: 250px;
+    height: 250px;
+    animation: levitateLeft 6s ease-in-out infinite;
+}
+
+.objectTransitionRight {
+    position: absolute;
+    top: 175px;
+    right: 75px;
+    width: 250px;
+    height: 250px;
+    animation: levitateRight 5.5s ease-in-out infinite;
+}
+
+@media screen and (max-width : 1199px) {
+    .objectTransitionLeft {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        width: 125px;
+        height: 125px;
+        animation: levitateLeft 6s ease-in-out infinite;
+    }
+    .objectTransitionRight {
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        width: 125px;
+        height: 125px;
+        animation: levitateRight 5.5s ease-in-out infinite;
     }
 }
 
-@media screen and (min-width: 577px) and (max-width: 992px) {
-    .containerContent {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-}
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------Compétences------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------ */
 
-@media screen and (min-width: 993px) and (max-width : 1199px) {
-    .containerContent {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-}
-
-
-/* ------------------------------------------Nuages de mots---------------------------------------- */
-
-.tagCloudContainer {
-    height: 100%;
+.containerContentTitle {
+    height: 15vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.tagcloud {
-    font-weight: 800;
-    font-size: 1.25rem;
-    transition: .2s ease-in-out;
-    color: var(--secondEmphasis);
+.containerContentSection {
+    height: 85vh;
 }
-  
-.tagcloud--item:hover {
-    color: var(--mainEmphasis) ;
+
+.containerIconsSection {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ------------------------------------------Icons------------------------------------------- */
+
+.containerIcons {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------Projets----------------------------------------------- */
+/* ------------------------------------------Projects---------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
 
-.containerProjects {
+.containerGridSection {
     height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 7.5vh;
     padding: 2rem 0rem;
     grid-template-areas:
     "projet1"
-    "projet2";
+    "projet2"
+    "projet3"
+    "projet4";
 }
 
-.cardProjects {
+.gridProjects {
     width: 100%;
-    height: 90vh;
+    height: 85vh;
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.cardProjects object {
+.gridProjects object {
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-
-@media screen and (min-width: 0px) and (max-width: 992px) {
-    .containerProjects {
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-areas:
-        "projet1 projet2" 
-        "projet3 projet4"
-        "projet5 projet6" 
-        "projet7 projet8";
-    }
 }
 
 /* ------------------------------------------------------------------------------------------------ */
@@ -521,10 +467,6 @@ footer {
     width: 17.5%;
 }
 
-.fa-github, .fa-linkedin {
-    color: white;
-}
-
 @media screen and (max-width: 576px) {
     .footerLinks ul {
         width: 90%;
@@ -536,16 +478,6 @@ footer {
         padding-top: 1rem;
         justify-content: space-around;
     }
-
-    .footerIcons {
-        width: 35px;
-    }
-}
-
-@media screen and (min-width: 577px) and (max-width: 992px) {
-}
-
-@media screen and (min-width: 993px) and (max-width : 1199px) {
 }
 
 /* ------------------------------------------------------------------------------------------------ */
@@ -554,7 +486,7 @@ footer {
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
 
-@keyframes navContent {
+@keyframes navContentApparition {
     0% {
         opacity: 0%;
         transform: translateY(-50vw);
@@ -574,7 +506,7 @@ footer {
     }
 }
 
-@keyframes backgroundHeader {
+@keyframes backgroundHeaderApparition {
     0% {
         opacity: 0%;
         filter: blur(100px);
@@ -592,4 +524,56 @@ footer {
     }
 }
 
+@keyframes objectLeftApparitionLeft {
+	0% {
+		transform: translate(-100vw, -100vh);
+        filter: blur(100px);
+	}
+	50% {
+		transform: translate(-50vw, -50vh);
+        filter: blur(100px);
+	}
+	100% {
+		transform: translate(0, 0);
+        filter: blur(0px);
+	}
+}
 
+@keyframes objectLeftApparitionRight {
+	0% {
+		transform: translate(100vw, 100vh);
+        filter: blur(100px);
+	}
+	50% {
+		transform: translate(50vw, -50vh);
+        filter: blur(100px);
+	}
+	100% {
+		transform: translate(0, 0);
+        filter: blur(0px);
+	}
+}
+
+@keyframes levitateLeft {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes levitateRight {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
