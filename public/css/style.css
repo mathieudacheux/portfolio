@@ -211,7 +211,7 @@ nav {
 
 @media screen and (max-width: 576px) {
     header {
-        background-size: 360px;
+        background-size: 350px;
     }
     .containerLinks ul li a {
         padding-left: 0;
@@ -221,7 +221,7 @@ nav {
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     header {
-        background-size: 550px;
+        background-size: 475px;
     }
     .containerLinks ul li a {
         padding-left: 0;
@@ -290,7 +290,7 @@ nav {
     animation: levitateRight 5.5s ease-in-out infinite;
 }
 
-@media screen and (max-width : 576px) {
+@media screen and (max-width: 576px) {
     .objectTransitionLeft {
         position: absolute;
         top: 50px;
@@ -305,6 +305,44 @@ nav {
         right: 0px;
         width: 100px;
         height: 100px;
+        animation: levitateRight 5.5s ease-in-out infinite;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .objectTransitionLeft {
+        position: absolute;
+        top: 75px;
+        left: 0px;
+        width: 175px;
+        height: 175px;
+        animation: levitateLeft 6s ease-in-out infinite;
+    }
+    .objectTransitionRight {
+        position: absolute;
+        top: 100px;
+        right: 0px;
+        width: 175px;
+        height: 175px;
+        animation: levitateRight 5.5s ease-in-out infinite;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+    .objectTransitionLeft {
+        position: absolute;
+        top: 75px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+        animation: levitateLeft 6s ease-in-out infinite;
+    }
+    .objectTransitionRight {
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        width: 200px;
+        height: 200px;
         animation: levitateRight 5.5s ease-in-out infinite;
     }
 }
@@ -346,6 +384,12 @@ nav {
     }
     .containerIconsSection {
         height: 90vh;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .containerContentSection {
+        height: auto;
     }
 }
 
@@ -391,6 +435,7 @@ nav {
     width: 100%;
     height: auto;
     display: grid;
+    grid-gap: 
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
@@ -427,7 +472,7 @@ nav {
 
 @media screen and (max-width: 576px) {
     .containerGridSection {
-        grid-gap: 1.5rem;
+        grid-gap: 1rem;
         padding-bottom: 1rem;
     }
     .gridProjectFirst, .gridProjectsRest {
@@ -439,6 +484,20 @@ nav {
     }
 }
 
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .containerGridSection {
+        grid-gap: 3rem;
+        padding-bottom: 3rem;
+    }
+    .gridProjectFirst, .gridProjectsRest {
+        height: auto;
+    }
+    .gridProjectFirst img, .gridProjectsRest img {
+        width: 100%;
+        height: 500px;
+    }
+}
+
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------Footer------------------------------------------------ */
@@ -447,6 +506,7 @@ nav {
 
 footer {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -465,6 +525,8 @@ footer {
 
 .footerContainerLeft p {
     font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--mainText);
 }
 
 button {
@@ -511,11 +573,11 @@ button a {
 }
 
 .footerIcons {
-    font-size: 2em;
+    font-size: 3rem;
     padding-left: 2rem;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
     footer {
         width: 100%;
         display: flex;
@@ -588,11 +650,16 @@ button a {
     }
     
     .footerIcons {
-        font-size: 2em;
+        font-size: 2rem;
         padding-left: 0rem;
     }
 }
 
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .footerIcons {
+        font-size: 2.5rem;
+    }
+}
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------Animations-------------------------------------------- */
