@@ -181,7 +181,7 @@ header {
     background: url('../assets/img/avatar.png') no-repeat;
     background-size: 600px;
     background-position: bottom;
-    animation: backgroundHeaderApparition 1.25s ease;
+    animation: backgroundHeaderApparition 1s ease;
 }
 
 nav {
@@ -274,11 +274,11 @@ nav {
 }
 
 .containerObjectLeft {
-    animation: objectLeftApparitionLeft 2s ease;
+    animation: objectLeftApparitionLeft 1.5s ease;
 }
 
 .containerObjectRight {
-    animation: objectLeftApparitionRight 2.5s ease;
+    animation: objectLeftApparitionRight 2s ease;
 }
 
 .objectTransitionLeft {
