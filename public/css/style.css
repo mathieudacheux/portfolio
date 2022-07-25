@@ -46,6 +46,15 @@ a {
     }
 }
 
+.scrollToTop {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    background-color: var(--secondEmphasis);
+    bottom: 15px;
+    right: 15px;
+}
+
 /* ------------------------------------------Font Settings----------------------------------------- */
 
 html {
@@ -882,26 +891,20 @@ button a {
     opacity: 0!important;
     animation: none!important;
     transition: 0s!important;
-  }
-  
-  .reveal-loaded [class*="reveal-"]{
-    animation: revealAnimation 1s cubic-bezier(.5, 0, 0, 1) both;
-  }
-  
-  .reveal-loaded .reveal-2 {
-    animation-delay: .1s;
-  }
-  
-  .reveal-loaded .reveal-3 {
-    animation-delay: .2s;
-  }
-  
-  .reveal-loaded .reveal-4 {
-    animation-delay: .3s;
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .reveal-loaded  [class*="reveal-"] {
-      animation: none!important;
-    }
-  }
+}
+
+.reveal-loaded [class*="reveal-"]{
+animation: revealAnimation 1s cubic-bezier(.5, 0, 0, 1) both;
+}
+
+.reveal-loaded .reveal-2 {
+animation-delay: .1s;
+}
+
+.reveal-loaded .reveal-3 {
+animation-delay: .2s;
+}
+
+.reveal-loaded .reveal-4 {
+animation-delay: .3s;
+}

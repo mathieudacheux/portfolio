@@ -1,6 +1,6 @@
 // Apparition au défilement
 
-const threshold = .15;
+const threshold = .1;
 const options = {
   root: null,
   rootMargin: '0px',
