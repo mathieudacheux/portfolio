@@ -570,7 +570,7 @@ nav {
     }
     .gridProjectFirst img, .gridProjectsRest img {
         width: 100%;
-        height: 350px;
+        height: 450px;
     }
 }
 
@@ -584,7 +584,7 @@ nav {
     }
     .gridProjectFirst img, .gridProjectsRest img {
         width: 100%;
-        height: 500px;
+        height: 650px;
     }
 }
 
@@ -854,3 +854,54 @@ button a {
 		transform: translatey(0px);
 	}
 }
+
+@keyframes apparitionContent {
+    0% {
+		transform: translatey(-30px);
+	}
+	50% {
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes revealAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+.reveal-loaded .reveal [class*="reveal-"] {
+    opacity: 0!important;
+    animation: none!important;
+    transition: 0s!important;
+  }
+  
+  .reveal-loaded [class*="reveal-"]{
+    animation: revealAnimation 1s cubic-bezier(.5, 0, 0, 1) both;
+  }
+  
+  .reveal-loaded .reveal-2 {
+    animation-delay: .1s;
+  }
+  
+  .reveal-loaded .reveal-3 {
+    animation-delay: .2s;
+  }
+  
+  .reveal-loaded .reveal-4 {
+    animation-delay: .3s;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-loaded  [class*="reveal-"] {
+      animation: none!important;
+    }
+  }
