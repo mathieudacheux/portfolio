@@ -275,7 +275,7 @@ nav {
 .objectTransitionLeft {
     position: absolute;
     top: 50px;
-    left: 45px;
+    left: 70px;
     width: 250px;
     height: 250px;
     animation: levitateLeft 6s ease-in-out infinite;
@@ -293,18 +293,18 @@ nav {
 @media screen and (max-width : 576px) {
     .objectTransitionLeft {
         position: absolute;
-        top: 50%;
+        top: 50px;
         left: 0px;
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
         animation: levitateLeft 6s ease-in-out infinite;
     }
     .objectTransitionRight {
         position: absolute;
-        top: 20px;
+        top: 70px;
         right: 0px;
-        width: 125px;
-        height: 125px;
+        width: 100px;
+        height: 100px;
         animation: levitateRight 5.5s ease-in-out infinite;
     }
 }
@@ -355,6 +355,14 @@ nav {
     padding-bottom: 2rem;
     display: flex;
     justify-content: space-around;
+}
+
+.centerIcons {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fa-brands, .fa-solid {
@@ -419,10 +427,15 @@ nav {
 
 @media screen and (max-width: 576px) {
     .containerGridSection {
-        grid-gap: 2.5rem;
+        grid-gap: 1.5rem;
+        padding-bottom: 1rem;
     }
     .gridProjectFirst, .gridProjectsRest {
-        height: 50vh;
+        height: auto;
+    }
+    .gridProjectFirst img, .gridProjectsRest img {
+        width: 100%;
+        height: 250px;
     }
 }
 
@@ -437,7 +450,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2rem;
+    padding: 2rem 0rem;
+    border-top: 2px solid var(--mainText);
 }
 
 .footerContainerLeft {
@@ -472,13 +486,13 @@ button a {
     height: 15vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .footerLinks {
     width: 100%;
-    height: 50%;
+    height: ;
     display: flex;
     justify-content: flex-end;
 }
@@ -497,7 +511,7 @@ button a {
 }
 
 .footerIcons {
-    font-size: 3em;
+    font-size: 2em;
     padding-left: 2rem;
 }
 
@@ -507,7 +521,7 @@ button a {
         display: flex;
         justify-content: center;
         flex-direction: column-reverse;
-        padding-bottom: 2rem;
+        padding: 1rem 0rem;
     }
     
     .footerContainerLeft {
@@ -567,7 +581,7 @@ button a {
     }
     
     .footerLogo {
-        padding: 1rem 0;
+        padding-bottom: 1rem;
         width: 50%;
         display: flex;
         justify-content: space-around;
@@ -665,7 +679,7 @@ button a {
 		transform: translatey(0px);
 	}
 	50% {
-		transform: translatey(-15px);
+		transform: translatey(-10px);
 	}
 	100% {
 		transform: translatey(0px);
@@ -677,7 +691,7 @@ button a {
 		transform: translatey(0px);
 	}
 	50% {
-		transform: translatey(-20px);
+		transform: translatey(-15px);
 	}
 	100% {
 		transform: translatey(0px);
