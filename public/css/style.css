@@ -19,6 +19,7 @@
 
 body {
     background-color: var(--mainBg);
+    overflow-x: hidden;
 }
 
 section {
@@ -479,6 +480,10 @@ nav {
 
 .fa-php:hover {
     color: #8993be;
+}
+
+.fa-symfony {
+    color: ;
 }
 
 .fa-wordpress:hover {
