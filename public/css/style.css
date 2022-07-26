@@ -527,10 +527,11 @@ nav {
     grid-gap: 4rem;
     padding-bottom: 4rem;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
     "projet1"
-    "projet2";
+    "projet2"
+    "projet3";
 }
 
 .gridProjectFirst {
