@@ -552,7 +552,7 @@ nav {
 
 .gridProjectFirst img, .gridProjectsRest img {
     object-fit: cover;
-    width: 1000px;
+    width: 1200px;
     height: 650px;
     border-radius: 10px;
 }
